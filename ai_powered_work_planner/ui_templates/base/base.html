@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Powered Part-Time Work Planner</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/schedule.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    {% include 'base/navbar.html' %}
+
+    <!-- PAGE HEADER / CONTEXT -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>AI-Powered Part-Time Work Planner</h1>
+            <p>Smart scheduling, intelligent workload prediction, and seamless work-life balance management.</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+
+        <!-- MESSAGES -->
+        {% if messages %}
+            <div class="message-container">
+                {% for message in messages %}
+                    <div class="alert">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- FOOTER -->
+    {% include 'base/footer.html' %}
+
+</body>
+</html>
