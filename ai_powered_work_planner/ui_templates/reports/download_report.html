@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="page-header-small">
+    <h2>Download Reports</h2>
+    <p>Export your schedule data for analysis and record keeping</p>
+</div>
+
+<div class="report-container">
+
+    <div class="card">
+        <h3>PDF Report</h3>
+        <p>Download a formatted schedule report</p>
+        <a href="/reports/pdf/" class="btn-primary">Download PDF</a>
+    </div>
+
+    <div class="card">
+        <h3>CSV Report</h3>
+        <p>Export raw data for Excel or analysis</p>
+        <a href="/reports/csv/" class="btn-primary">Download CSV</a>
+    </div>
+
+</div>
+
+{% endblock %}
