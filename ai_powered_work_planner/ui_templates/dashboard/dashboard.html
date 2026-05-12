@@ -1,0 +1,84 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="dashboard">
+
+    <h2>Dashboard Overview</h2>
+
+    <!-- TOP CARDS -->
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3>Total Hours</h3>
+            <p>{{ analytics.total_hours }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Expected Income</h3>
+            <p>₹ {{ analytics.expected_income }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Workload Level</h3>
+            <p>{{ ai.workload }}</p>
+        </div>
+
+    </div>
+
+    <!-- AI INSIGHTS -->
+    <div class="section">
+
+        <h3>AI Insights</h3>
+
+        <ul>
+            {% for suggestion in ai.suggestions %}
+                <li>{{ suggestion }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <!-- CONFLICT WARNINGS -->
+    <div class="section">
+
+        <h3>Schedule Conflicts</h3>
+
+        {% if ai.conflicts %}
+            <ul>
+                {% for c in ai.conflicts %}
+                    <li>Conflict detected between shifts</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No conflicts detected</p>
+        {% endif %}
+
+    </div>
+
+    <!-- RECENT SHIFTS -->
+    <div class="section">
+
+        <h3>Upcoming Shifts</h3>
+
+        <table>
+            <tr>
+                <th>Job</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+
+            {% for shift in shifts %}
+            <tr>
+                <td>{{ shift.job.job_name }}</td>
+                <td>{{ shift.start_time }}</td>
+                <td>{{ shift.end_time }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
