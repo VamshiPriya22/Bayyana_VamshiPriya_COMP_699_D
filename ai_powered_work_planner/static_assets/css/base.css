@@ -1,0 +1,151 @@
+/* =========================
+   GLOBAL BODY
+========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+
+    /* DARK PROFESSIONAL BACKGROUND */
+    background: linear-gradient(135deg, #020617, #0f172a);
+
+    min-height: 100vh;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* =========================
+   NAVBAR (FIXED PRO VERSION)
+========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    background: #0f172a;  /* DARK NAVBAR */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-left h2 {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.tagline {
+    font-size: 12px;
+    display: block;
+    color: #94a3b8;
+}
+
+/* NAV LINKS */
+.navbar a {
+    margin-left: 20px;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #4facfe;
+}
+
+/* BUTTONS */
+.logout-btn {
+    background: #ef4444;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: white;
+}
+
+.register-btn {
+    background: #22c55e;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* =========================
+   HERO HEADER (FIXED)
+========================= */
+.page-header {
+    padding: 50px 20px;
+    text-align: center;
+
+    /* REMOVE WHITE BACKGROUND */
+    background: transparent;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 32px;
+
+    color: #ffffff;
+
+    /* TEXT VISIBILITY BOOST */
+    text-shadow: 0px 3px 10px rgba(0,0,0,0.6);
+}
+
+.page-header p {
+    color: #cbd5f5;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main-container {
+    padding: 30px;
+}
+
+/* =========================
+   ALERTS
+========================= */
+.message-container {
+    margin-bottom: 20px;
+}
+
+.alert {
+    padding: 12px;
+    background: #22c55e;
+    border-radius: 6px;
+    color: white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #aaa;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-sub {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* =========================
+   RESPONSIVE (IMPORTANT)
+========================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+}

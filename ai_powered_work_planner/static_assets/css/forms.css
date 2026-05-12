@@ -1,0 +1,83 @@
+/* =========================
+   FORM CONTAINER
+========================= */
+.form-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+
+    /* 🔥 FORCE TEXT COLOR */
+    color: #111827;
+}
+
+/* =========================
+   FORCE ALL TEXT INSIDE FORM
+========================= */
+.form-container * {
+    color: #111827 !important;
+}
+
+/* =========================
+   FORCE INPUT FIX (CRITICAL)
+========================= */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    /* 🔥 FORCE VISIBILITY */
+    color: #111827 !important;
+    background: #ffffff !important;
+
+    font-size: 14px;
+}
+
+/* =========================
+   INPUT FOCUS
+========================= */
+.form-container input:focus,
+.form-container select:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0px 0px 6px rgba(79,172,254,0.6);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+    background: linear-gradient(90deg, #4facfe, #00c6ff);
+    color: white !important;
+
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #3a8dde, #00a2d4);
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+
+    background: #e5e7eb;
+    color: #111827 !important;
+
+    border-radius: 5px;
+    text-decoration: none;
+}

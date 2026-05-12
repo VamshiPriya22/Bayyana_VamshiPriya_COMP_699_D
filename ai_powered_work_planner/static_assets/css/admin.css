@@ -1,0 +1,15 @@
+.report-container {
+    display: flex;
+    gap: 20px;
+}
+
+.settings-container {
+    display: flex;
+    gap: 20px;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
