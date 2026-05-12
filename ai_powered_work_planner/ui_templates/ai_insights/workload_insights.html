@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="page-header-small">
+    <h2>AI Workload Insights</h2>
+    <p>Smart analysis of your work schedule and recommendations</p>
+</div>
+
+<div class="dashboard-cards">
+
+    <div class="card">
+        <h3>Workload Level</h3>
+        <p>{{ ai.workload }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Hours</h3>
+        <p>{{ ai.features.total_hours }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Overlap Count</h3>
+        <p>{{ ai.features.overlap_count }}</p>
+    </div>
+
+</div>
+
+<div class="section">
+    <h3>Smart Recommendations</h3>
+
+    <ul>
+        {% for suggestion in ai.suggestions %}
+            <li>{{ suggestion }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="section">
+    <h3>Conflict Detection</h3>
+
+    {% if ai.conflicts %}
+        <ul>
+            {% for c in ai.conflicts %}
+                <li>Conflict detected between overlapping shifts</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No conflicts detected</p>
+    {% endif %}
+</div>
+
+{% endblock %}
