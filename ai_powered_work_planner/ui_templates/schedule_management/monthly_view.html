@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="page-header-small">
+    <h2>Monthly Overview</h2>
+    <p>High-level view of your schedule distribution</p>
+</div>
+
+<div class="calendar-grid">
+
+    {% for shift in shifts %}
+        <div class="calendar-card">
+            <h4>{{ shift.start_time|date:"M d" }}</h4>
+            <p>{{ shift.job.job_name }}</p>
+        </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

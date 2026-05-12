@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="form-container">
+
+    <h2>Set Availability</h2>
+    <p class="form-subtitle">Define your free time for better scheduling</p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label>Available From</label>
+            <input type="time" name="start_time" required>
+        </div>
+
+        <div class="form-group">
+            <label>Available To</label>
+            <input type="time" name="end_time" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Save Availability</button>
+
+    </form>
+
+</div>
+
+{% endblock %}

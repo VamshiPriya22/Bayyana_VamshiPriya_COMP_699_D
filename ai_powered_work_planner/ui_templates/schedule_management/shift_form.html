@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="form-container">
+
+    <h2>Add / Edit Shift</h2>
+    <p class="form-subtitle">Schedule your working hours</p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label>Select Job</label>
+            {{ form.job }}
+        </div>
+
+        <div class="form-group">
+            <label>Start Time</label>
+            {{ form.start_time }}
+        </div>
+
+        <div class="form-group">
+            <label>End Time</label>
+            {{ form.end_time }}
+        </div>
+
+        <button type="submit" class="btn-primary">Save Shift</button>
+
+        <a href="/schedule/" class="btn-secondary">Cancel</a>
+
+    </form>
+
+</div>
+
+{% endblock %}
