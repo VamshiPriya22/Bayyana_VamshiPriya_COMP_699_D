@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="page-header-small">
+    <h2>Model Accuracy Logs</h2>
+</div>
+
+<div class="table-container">
+
+    <table>
+        <tr>
+            <th>Accuracy</th>
+            <th>Timestamp</th>
+        </tr>
+
+        {% for log in logs %}
+        <tr>
+            <td>{{ log.accuracy }}</td>
+            <td>{{ log.created_at }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}

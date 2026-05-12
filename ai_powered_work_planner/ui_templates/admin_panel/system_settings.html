@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="page-header-small">
+    <h2>System Settings</h2>
+    <p>Manage system configurations and AI behavior</p>
+</div>
+
+<div class="settings-container">
+
+    <div class="card">
+        <h3>Model Control</h3>
+        <p>Retrain or update AI model</p>
+        <a href="/admin/retrain/" class="btn-primary">Retrain Model</a>
+    </div>
+
+    <div class="card">
+        <h3>Rule Engine</h3>
+        <p>Update overlap detection rules</p>
+        <a href="/admin/update-rules/" class="btn-secondary">Update Rules</a>
+    </div>
+
+</div>
+
+{% endblock %}

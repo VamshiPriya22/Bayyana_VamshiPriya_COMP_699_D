@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<div class="page-header-small">
+    <h2>System Admin Dashboard</h2>
+    <p>Monitor AI performance and system activity</p>
+</div>
+
+<div class="dashboard-cards">
+
+    <div class="card">
+        <h3>Model Accuracy</h3>
+        <p>{{ accuracy }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Active Users</h3>
+        <p>{{ user_count }}</p>
+    </div>
+
+</div>
+
+<div class="action-bar">
+    <a href="/admin/retrain/" class="btn-primary">Retrain Model</a>
+    <a href="/admin/update-rules/" class="btn-secondary">Update Rules</a>
+</div>
+
+<div class="section">
+    <h3>Model Logs</h3>
+
+    <table>
+        <tr>
+            <th>Accuracy</th>
+            <th>Date</th>
+        </tr>
+
+        {% for log in logs %}
+        <tr>
+            <td>{{ log.accuracy }}</td>
+            <td>{{ log.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+{% endblock %}
